@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shop</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Book Shop</h1>
+  <ul>
+    <% books.forEach(book => { %>
+      <li>
+        <h2><%= book.title %></h2>
+        <p><%= book.author %> | <%= book.price %> USD</p>
+        <a href="/books/buy/<%= book._id %>">Buy</a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
